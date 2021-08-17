@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+:root {
+  --cyan--bg-color: rgba(42, 178, 176, 0.698);
+  --yellow--bg-color: rgb(192, 223, 52);
+  --lg--gray-color: rgb(229, 239, 245);
+  --dark--blue-color: rgb(152, 166, 189);
+  --cyan-lg-color: rgb(50, 187, 185);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(152, 166, 189);
+  font-family: "Karla", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: none;
+}
+.wrapper {
+  height: 500px;
+  width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.first {
+  background: #fff;
+  padding: 45px 80px 45px 40px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  grid-column: 1 / span 2;
+}
+.first h1 {
+  color: var(--cyan--bg-color);
+  margin-bottom: 30px;
+}
+.first h3 {
+  color: var(--yellow--bg-color);
+  margin-bottom: 30px;
+}
+.first p {
+  color: var(--dark--blue-color);
+}
+.sec,
+.three {
+  padding: 30px 30px 50px 30px;
+  color: var(--lg--gray-color);
+}
+.sec {
+  background: var(--cyan-lg-color);
+  border-bottom-left-radius: 10px;
+}
+.sec h1,
+.three h1 {
+  margin-bottom: 20px;
+}
+.sec .perprice {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.sec .month {
+  font-size: 18px;
+  color: #bbbbbb;
+  margin-left: 10px;
+}
+.sec a {
+  margin-top: 20px;
+  background: var(--yellow--bg-color);
+  color: var(--lg--gray-color);
+  border-radius: 10px;
+  display: block;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.three {
+  background: rgb(113, 212, 211);
+
+  border-bottom-right-radius: 10px;
+}
+.three ul li {
+  margin-bottom: 5px;
+}
+@media (max-width: 625px) {
+  body {
+    padding: 0 30px;
+  }
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .first {
+    grid-column: 1;
+  }
+  .sec {
+    grid-column: 1;
+  }
+  .three {
+    grid-column: 1;
+  }
+}
